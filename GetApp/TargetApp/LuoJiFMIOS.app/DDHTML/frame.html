@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>文章页</title>
+  <link rel="dns-prefetch" href="//staticcdn.luojilab.com"/>
+  <link rel="dns-prefetch" href="//piccdn.luojilab.com"/>
+  <script>
+  var initData = function(data){
+    // window上的initialData变量用来接收客户端初始化数据
+    // 数据格式如下:
+    // {
+    //   article: {},
+    //   compatible: {type: 36, parentId: 12, aid: 1252},
+    //   config: {"audio_playing": "aliasId", "scroll": {"y":1000, "user": 111}, "font": 0}
+    // }
+    // {
+    //   config: {
+    //     group: {
+    //       background: '#6596c4',
+    //       group_count: 244966,
+    //       group_id: 18,
+    //       image: 'https://piccdn.igetget.com/img/201702/27/201702271536194713227830.jpg@200w_1l_',
+    //       name: '经济学社',
+    //       pid: 25,
+    //       ptype: 4,
+    //       signin_count: 1147
+    //     }
+    //   }
+    // }
+    if(typeof data === 'object') {
+      window.initialData = data;
+      console.warn(JSON.stringify(data));
+    }
+    var event = document.createEvent('HTMLEvents');
+    event.initEvent("initialData", true, true);
+    window.dispatchEvent(event);
+  };
+  window.serverConfig = {
+    commentsListUrl: '$_V3_DOMAIN_$/v3/comment/getList',
+    commentsLikeUrl: '$_V3_DOMAIN_$/v3/comment/likeComment',
+    commentsDeleteUrl: '$_V3_DOMAIN_$/v3/comment/del',
+    eliteStatusUrl: '$_ENTREE_DOMAIN_$/diary/v1/notepoint/get/usernote'
+  };
+  // 本地开发时使用此变量
+  // window.serverConfig = {
+  //   commentsListUrl: 'http://api.iget.dev.didatrip.com/v3/comment/getList',
+  //   commentsLikeUrl: 'http://api.iget.dev.didatrip.com/v3/comment/likeComment',
+  //   commentsDeleteUrl: 'http://api.iget.dev.didatrip.com/v3/comment/del',
+  //   eliteStatusUrl: 'http://entree.dev.didatrip.com/diary/v1/notepoint/get/usernote',
+  // };
+</script>
+  <meta http-equiv="cleartype" content="on"/>
+  <meta name="format-detection" content="telephone=no, email=no"/>
+  <script type="text/javascript" id="viewport">
+(function(win, lib) {
+  var doc = win.document;
+  var docEl = doc.documentElement;
+  var metaEl = doc.querySelector('meta[name="viewport"]');
+  var flexibleEl = doc.querySelector('meta[name="flexible"]');
+  var dpr = 0;
+  var scale = 0;
+  var tid;
+  var flexible = lib.flexible || (lib.flexible = {});
+
+  if (metaEl) {
+    console.warn('将根据已有的meta标签来设置缩放比例');
+    var match = metaEl
+      .getAttribute('content')
+      .match(/initial\-scale=([\d\.]+)/);
+    if (match) {
+      scale = parseFloat(match[1]);
+      dpr = parseInt(1 / scale);
+    }
+  } else if (flexibleEl) {
+    var content = flexibleEl.getAttribute('content');
+    if (content) {
+      var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+      var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+      if (initialDpr) {
+        dpr = parseFloat(initialDpr[1]);
+        scale = parseFloat((1 / dpr).toFixed(2));
+      }
+      if (maximumDpr) {
+        dpr = parseFloat(maximumDpr[1]);
+        scale = parseFloat((1 / dpr).toFixed(2));
+      }
+    }
+  }
+
+  if (!dpr && !scale) {
+    var isAndroid = win.navigator.appVersion.match(/android/gi);
+    var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+    var devicePixelRatio = win.devicePixelRatio;
+    if (isIPhone) {
+      // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+      if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+        dpr = 3;
+      } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+        dpr = 2;
+      } else {
+        dpr = 1;
+      }
+    } else {
+      // 其他设备下，仍旧使用1倍的方案
+      dpr = 1;
+    }
+    scale = 1 / dpr;
+  }
+
+  docEl.setAttribute('data-dpr', dpr);
+  if (!metaEl) {
+    metaEl = doc.createElement('meta');
+    metaEl.setAttribute('name', 'viewport');
+    metaEl.setAttribute(
+      'content',
+      'initial-scale=' +
+        scale +
+        ', maximum-scale=' +
+        scale +
+        ', minimum-scale=' +
+        scale +
+        ', user-scalable=no'
+    );
+    if (docEl.firstElementChild) {
+      docEl.firstElementChild.appendChild(metaEl);
+    } else {
+      var wrap = doc.createElement('div');
+      wrap.appendChild(metaEl);
+      doc.write(wrap.innerHTML);
+    }
+  }
+
+  function refreshRem() {
+    var width = docEl.getBoundingClientRect().width;
+    // if (width / dpr > 540) {
+    //     width = 540 * dpr;
+    // }
+    if (width < 10) {
+      // 兼容部分情况下可能出现的宽度获取不到的问题
+      width = 375 * dpr;
+    }
+    var rem = width / 10;
+    docEl.style.fontSize = rem + 'px';
+    flexible.rem = win.rem = rem;
+  }
+
+  win.addEventListener(
+    'resize',
+    function() {
+      clearTimeout(tid);
+      tid = setTimeout(refreshRem, 300);
+    },
+    false
+  );
+  win.addEventListener(
+    'pageshow',
+    function(e) {
+      if (e.persisted) {
+        clearTimeout(tid);
+        tid = setTimeout(refreshRem, 300);
+      }
+    },
+    false
+  );
+  win.addEventListener(
+    'orientationchange',
+    function() {
+      clearTimeout(timer);
+      timer = setTimeout(setFontSize, 300);
+    },
+    false
+  );
+
+  if (doc.readyState === 'complete') {
+    doc.body.style.fontSize = 12 * dpr + 'px';
+  } else {
+    doc.addEventListener(
+      'DOMContentLoaded',
+      function(e) {
+        doc.body.style.fontSize = 12 * dpr + 'px';
+      },
+      false
+    );
+  }
+
+  refreshRem();
+
+  flexible.dpr = win.dpr = dpr;
+  flexible.refreshRem = refreshRem;
+  flexible.rem2px = function(d) {
+    var val = parseFloat(d) * this.rem;
+    if (typeof d === 'string' && d.match(/rem$/)) {
+      val += 'px';
+    }
+    return val;
+  };
+  flexible.px2rem = function(d) {
+    var val = parseFloat(d) / this.rem;
+    if (typeof d === 'string' && d.match(/px$/)) {
+      val += 'rem';
+    }
+    return val;
+  };
+})(window, window['lib'] || (window['lib'] = {}));
+
+</script>
+
+
+  <link rel="stylesheet" href="dist/css/zt.286ca757aa8ef78011ae64915ff83008.css">
+
+</head>
+
+<body>
+  <div id="app"></div>
+
+    <script type="text/javascript">
+      window.staticBaseUrl = "/";
+    </script>
+    <script src="dist/js/manifest.8b81d15b1f228fe571ee.js"></script>
+    <script src="dist/js/vendor.a796362782cba8ceb2a7.js"></script>
+    <script src="dist/js/zt.6e578cc6ed7faf4e93ee.js"></script>
+
+</body>
+
+</html>

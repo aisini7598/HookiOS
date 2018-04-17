@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8172A8CB2057E5BF00F0EEA9 /* NSObject+fullDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 8172A8C82057E5BF00F0EEA9 /* NSObject+fullDescription.m */; };
+		8172A8CC2057E5BF00F0EEA9 /* NSObject+fullDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 8172A8C92057E5BF00F0EEA9 /* NSObject+fullDescription.h */; };
+		81A42A7C205933EF0016332B /* PFHostSwitcherURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A42A7A205933EE0016332B /* PFHostSwitcherURLProtocol.m */; };
+		81A42A7D205933EF0016332B /* PFHostSwitcherURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A42A7B205933EF0016332B /* PFHostSwitcherURLProtocol.h */; };
 		81FC6F4F204D349E00AB3791 /* MethodTraceConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81FC6F4E204D349E00AB3791 /* MethodTraceConfig.plist */; };
 		81FC6F52204D349E00AB3791 /* put ipa or app here in Resources */ = {isa = PBXBuildFile; fileRef = 81FC6F51204D349E00AB3791 /* put ipa or app here */; };
 		81FC6F5A204D349E00AB3791 /* libGetAppDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81FC6F59204D349E00AB3791 /* libGetAppDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		81FC6F5F204D349E00AB3791 /* Cycript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F5E204D349E00AB3791 /* Cycript.framework */; };
 		81FC6F61204D349E00AB3791 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F60204D349E00AB3791 /* JavaScriptCore.framework */; };
-		81FC6F63204D349E00AB3791 /* RevealServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F62204D349E00AB3791 /* RevealServer.framework */; };
 		81FC6F65204D349E00AB3791 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F64204D349E00AB3791 /* Foundation.framework */; };
 		81FC6F67204D349E00AB3791 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F66204D349E00AB3791 /* UIKit.framework */; };
 		81FC6F6B204D349F00AB3791 /* ANYMethodLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 81FC6F6A204D349F00AB3791 /* ANYMethodLog.h */; };
@@ -51,6 +54,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1BE57423404ADDB65E08BB81 /* libPods-GetApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8172A8C82057E5BF00F0EEA9 /* NSObject+fullDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+fullDescription.m"; sourceTree = "<group>"; };
+		8172A8C92057E5BF00F0EEA9 /* NSObject+fullDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+fullDescription.h"; sourceTree = "<group>"; };
+		819B9D64204E957000DD15EA /* BuildIPA.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = BuildIPA.sh; sourceTree = "<group>"; };
+		81A42A7A205933EE0016332B /* PFHostSwitcherURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFHostSwitcherURLProtocol.m; sourceTree = "<group>"; };
+		81A42A7B205933EF0016332B /* PFHostSwitcherURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFHostSwitcherURLProtocol.h; sourceTree = "<group>"; };
 		81FC6F4B204D349E00AB3791 /* GetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FC6F4E204D349E00AB3791 /* MethodTraceConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MethodTraceConfig.plist; sourceTree = "<group>"; };
 		81FC6F51204D349E00AB3791 /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; name = "put ipa or app here"; path = "TargetApp/put ipa or app here"; sourceTree = "<group>"; };
@@ -69,10 +78,15 @@
 		81FC6F75204D349F00AB3791 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AntiAntiDebug.m; path = AntiAntiDebug/AntiAntiDebug.m; sourceTree = "<group>"; };
 		81FC6F78204D349F00AB3791 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
 		81FC6F7A204D349F00AB3791 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
-		81FC6F7C204D349F00AB3791 /* GetAppDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetAppDylib.xm; sourceTree = "<group>"; };
+		81FC6F7C204D349F00AB3791 /* GetAppDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GetAppDylib.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		81FC6F7D204D349F00AB3791 /* GetAppDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GetAppDylib.mm; sourceTree = "<group>"; };
 		81FC6F7F204D349F00AB3791 /* GetAppDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetAppDylib.h; sourceTree = "<group>"; };
 		81FC6F81204D349F00AB3791 /* GetAppDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetAppDylib.m; sourceTree = "<group>"; };
+		94C06B48933C4AEE78B76461 /* Pods-GetAppDylib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetAppDylib.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetAppDylib/Pods-GetAppDylib.release.xcconfig"; sourceTree = "<group>"; };
+		98E50A6ABBCD9DC04E699B19 /* Pods-GetAppDylib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetAppDylib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetAppDylib/Pods-GetAppDylib.debug.xcconfig"; sourceTree = "<group>"; };
+		9A283683DB17C0851EF5CC7C /* Pods-GetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetApp/Pods-GetApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A0B3293AD4ED6AE6B4DCFCC7 /* libPods-GetAppDylib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GetAppDylib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2FED3C456C8F33C22DF1450 /* Pods-GetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetApp/Pods-GetApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +102,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81FC6F61204D349E00AB3791 /* JavaScriptCore.framework in Frameworks */,
-				81FC6F63204D349E00AB3791 /* RevealServer.framework in Frameworks */,
 				81FC6F5F204D349E00AB3791 /* Cycript.framework in Frameworks */,
 				81FC6F65204D349E00AB3791 /* Foundation.framework in Frameworks */,
 				81FC6F67204D349E00AB3791 /* UIKit.framework in Frameworks */,
@@ -101,10 +114,12 @@
 		81FC6F3F204D349E00AB3791 = {
 			isa = PBXGroup;
 			children = (
+				819B9D64204E957000DD15EA /* BuildIPA.sh */,
 				81FC6F4D204D349E00AB3791 /* GetApp */,
 				81FC6F68204D349E00AB3791 /* GetAppDylib */,
 				81FC6F5D204D349E00AB3791 /* Frameworks */,
 				81FC6F4C204D349E00AB3791 /* Products */,
+				97908A967D3670A4D9EC5194 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +158,8 @@
 				81FC6F62204D349E00AB3791 /* RevealServer.framework */,
 				81FC6F64204D349E00AB3791 /* Foundation.framework */,
 				81FC6F66204D349E00AB3791 /* UIKit.framework */,
+				1BE57423404ADDB65E08BB81 /* libPods-GetApp.a */,
+				A0B3293AD4ED6AE6B4DCFCC7 /* libPods-GetAppDylib.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +167,10 @@
 		81FC6F68204D349E00AB3791 /* GetAppDylib */ = {
 			isa = PBXGroup;
 			children = (
+				81A42A7B205933EF0016332B /* PFHostSwitcherURLProtocol.h */,
+				81A42A7A205933EE0016332B /* PFHostSwitcherURLProtocol.m */,
+				8172A8C92057E5BF00F0EEA9 /* NSObject+fullDescription.h */,
+				8172A8C82057E5BF00F0EEA9 /* NSObject+fullDescription.m */,
 				81FC6F7C204D349F00AB3791 /* GetAppDylib.xm */,
 				81FC6F7D204D349F00AB3791 /* GetAppDylib.mm */,
 				81FC6F7F204D349F00AB3791 /* GetAppDylib.h */,
@@ -198,6 +219,17 @@
 			name = fishhook;
 			sourceTree = "<group>";
 		};
+		97908A967D3670A4D9EC5194 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A283683DB17C0851EF5CC7C /* Pods-GetApp.debug.xcconfig */,
+				C2FED3C456C8F33C22DF1450 /* Pods-GetApp.release.xcconfig */,
+				98E50A6ABBCD9DC04E699B19 /* Pods-GetAppDylib.debug.xcconfig */,
+				94C06B48933C4AEE78B76461 /* Pods-GetAppDylib.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -205,10 +237,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8172A8CC2057E5BF00F0EEA9 /* NSObject+fullDescription.h in Headers */,
 				81FC6F80204D349F00AB3791 /* GetAppDylib.h in Headers */,
 				81FC6F6B204D349F00AB3791 /* ANYMethodLog.h in Headers */,
 				81FC6F6F204D349F00AB3791 /* MethodTrace.h in Headers */,
 				81FC6F7B204D349F00AB3791 /* fishhook.h in Headers */,
+				81A42A7D205933EF0016332B /* PFHostSwitcherURLProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,10 +274,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81FC6F85204D349F00AB3791 /* Build configuration list for PBXNativeTarget "GetAppDylib" */;
 			buildPhases = (
+				CD3369F1F2AE5E1B1B317FDE /* [CP] Check Pods Manifest.lock */,
 				81FC6F54204D349E00AB3791 /* ShellScript */,
 				81FC6F55204D349E00AB3791 /* Sources */,
 				81FC6F56204D349E00AB3791 /* Frameworks */,
 				81FC6F57204D349E00AB3791 /* Headers */,
+				D65DD387C42EFE7F0C2B2F9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -343,6 +379,39 @@
 			shellPath = /bin/sh;
 			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
 		};
+		CD3369F1F2AE5E1B1B317FDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetAppDylib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D65DD387C42EFE7F0C2B2F9C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetAppDylib/Pods-GetAppDylib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -357,7 +426,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A42A7C205933EF0016332B /* PFHostSwitcherURLProtocol.m in Sources */,
 				81FC6F76204D349F00AB3791 /* AntiAntiDebug.m in Sources */,
+				8172A8CB2057E5BF00F0EEA9 /* NSObject+fullDescription.m in Sources */,
 				81FC6F82204D349F00AB3791 /* GetAppDylib.m in Sources */,
 				81FC6F71204D349F00AB3791 /* MethodTrace.m in Sources */,
 				81FC6F79204D349F00AB3791 /* fishhook.c in Sources */,
@@ -483,6 +554,7 @@
 		};
 		81FC6F86204D349F00AB3791 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E50A6ABBCD9DC04E699B19 /* Pods-GetAppDylib.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXKY75PL3W;
@@ -500,6 +572,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GetAppDylib/GetAppDylib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -508,6 +581,7 @@
 					"$(MonkeyDevPath)/include",
 					"$(MonkeyDevTheosPath)/vendor/include/**",
 				);
+				INFOPLIST_FILE = "$(SRCROOT)/GetApp/Info.plist";
 				INSTALL_PATH = "@executable_path/Frameworks/libGetAppDylib.dylib";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -527,8 +601,14 @@
 					"/usr/lib/libc++.dylib",
 					"-weak_library",
 					"/usr/lib/libstdc++.dylib",
-					"-lsubstrate",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-framework",
+					Cycript,
+					"-framework",
+					RevealServer,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.knowbox.GetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
@@ -537,6 +617,7 @@
 		};
 		81FC6F87204D349F00AB3791 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94C06B48933C4AEE78B76461 /* Pods-GetAppDylib.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
@@ -553,8 +634,10 @@
 					"$(MonkeyDevTheosPath)/vendor/lib",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GetAppDylib/GetAppDylib-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -562,6 +645,7 @@
 					"$(MonkeyDevPath)/include",
 					"$(MonkeyDevTheosPath)/vendor/include/**",
 				);
+				INFOPLIST_FILE = "$(SRCROOT)/GetApp/Info.plist";
 				INSTALL_PATH = "@executable_path/Frameworks/libGetAppDylib.dylib";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -581,8 +665,10 @@
 					"/usr/lib/libc++.dylib",
 					"-weak_library",
 					"/usr/lib/libstdc++.dylib",
-					"-lsubstrate",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.knowbox.GetApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -590,10 +676,12 @@
 		};
 		81FC6F89204D349F00AB3791 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A283683DB17C0851EF5CC7C /* Pods-GetApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXKY75PL3W;
 				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = GetApp/Info.plist;
 				MONKEYDEV_CLASS_DUMP = NO;
 				MONKEYDEV_RESTORE_SYMBOL = NO;
@@ -607,10 +695,13 @@
 		};
 		81FC6F8A204D349F00AB3791 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2FED3C456C8F33C22DF1450 /* Pods-GetApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZXKY75PL3W;
 				ENABLE_BITCODE = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = GetApp/Info.plist;
 				MONKEYDEV_CLASS_DUMP = NO;
 				MONKEYDEV_RESTORE_SYMBOL = NO;

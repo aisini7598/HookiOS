@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  <!-- add jQuery -->
+  </script>
+  <script>
+  <!-- add Editor -->
+  </script>
+  <style type="text/css">
+  <!-- add CSS -->
+  
+ 
+  [placeholder]:empty:before {
+      content: attr(placeholder);
+      color: #AAA;
+  }
+  
+  [placeholder]:empty:focus:before {
+      content: "";
+  }
+  </style>
+  
+  
+</head>
+<body onLoad = "fm_js_editor.init()">
+    <div class="post-article" id = "post-article1">
+        <div class="post-content" id = "post-content1">
+            <div id="editor_content" class="editor_content" contenteditable="true" placeholder=""></div>
+            <div id="editor_footer"></div>
+        </div>
+    </div>
+</body>
+</html>
