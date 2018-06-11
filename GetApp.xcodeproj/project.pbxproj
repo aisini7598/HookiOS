@@ -14,7 +14,7 @@
 		81FC6F4F204D349E00AB3791 /* MethodTraceConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81FC6F4E204D349E00AB3791 /* MethodTraceConfig.plist */; };
 		81FC6F52204D349E00AB3791 /* put ipa or app here in Resources */ = {isa = PBXBuildFile; fileRef = 81FC6F51204D349E00AB3791 /* put ipa or app here */; };
 		81FC6F5A204D349E00AB3791 /* libGetAppDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 81FC6F59204D349E00AB3791 /* libGetAppDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		81FC6F5F204D349E00AB3791 /* Cycript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F5E204D349E00AB3791 /* Cycript.framework */; };
+		81FC6F5F204D349E00AB3791 /* Cycript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F5E204D349E00AB3791 /* Cycript.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		81FC6F61204D349E00AB3791 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F60204D349E00AB3791 /* JavaScriptCore.framework */; };
 		81FC6F65204D349E00AB3791 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F64204D349E00AB3791 /* Foundation.framework */; };
 		81FC6F67204D349E00AB3791 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FC6F66204D349E00AB3791 /* UIKit.framework */; };
@@ -684,7 +684,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = GetApp/Info.plist;
 				MONKEYDEV_CLASS_DUMP = NO;
-				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_RESTORE_SYMBOL = YES;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.knowbox.GetApp;

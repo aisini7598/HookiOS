@@ -4,9 +4,7 @@
 //
 //  Created by Aslan on 7/6/16.
 //  Copyright © 2016 Knowin. All rights reserved.
-//
-
-#if TEST || DEBUG
+//    
 
 #import "PFHostSwitcherURLProtocol.h"
 #import <objc/runtime.h>
@@ -113,5 +111,3 @@
 }
 
 @end
-
-#endif
